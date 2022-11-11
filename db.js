@@ -19,6 +19,16 @@ const Counter = sequelize.define("Counter", {
     defaultValue: 1,
   },
 });
+const User = sequelize.define("User", {
+  nickName: {
+    type: DataTypes.VARCHAR,
+    allowNull: true
+  },
+  country: {
+    type: DataTypes.VARCHAR,
+    allowNull: true
+  }
+});
 
 // 数据库初始化方法
 async function init() {
@@ -29,4 +39,5 @@ async function init() {
 module.exports = {
   init,
   Counter,
+  User
 };
