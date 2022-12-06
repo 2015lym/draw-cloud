@@ -33,6 +33,7 @@ const User = sequelize.define("User", {
 // 数据库初始化方法
 async function init() {
   await Counter.sync({ alter: true });
+  await User.sync({ alter: true });
 }
 
 // 导出初始化方法和模型
